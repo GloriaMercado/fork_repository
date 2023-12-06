@@ -7,6 +7,7 @@ Date: 30/09/2023
 */
 #include <iostream>
 #include <string>
+#include <cmath>
 
 using namespace std;
 
@@ -38,6 +39,10 @@ public:
     void printInformation() const override {
         cout << "Circle - Perimeter: " << perimeter << ", Radius: " << radius << ", Color: " << color << endl;
     }
+    // Function to calculate and return the area of the circle
+    double calculateArea() const {
+        return M_PI * radius * radius;
+    }
 };
 
 int main() {
@@ -46,6 +51,9 @@ int main() {
 
     // Call methods of the Circle class
     myCircle.printInformation();
+
+     // Calculate and print the area of the circle
+    cout << "Area: " << myCircle.calculateArea() << endl;
 
     return 0;
 }
